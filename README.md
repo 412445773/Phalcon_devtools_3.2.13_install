@@ -15,6 +15,7 @@ chmod u+x initialize_env.sh install_imagick.exp
 
 # Usage
 ```
+php -v
 phpcs -h
 phpcbf -h
 phalcon commands
