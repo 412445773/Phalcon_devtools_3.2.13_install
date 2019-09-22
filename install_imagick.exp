@@ -1,0 +1,7 @@
+#!/usr/bin/expect
+set timeout -1
+spawn pecl install imagick
+expect {
+    "Please provide the prefix of ImageMagick installation*" {send "\n"}
+}
+expect eof
