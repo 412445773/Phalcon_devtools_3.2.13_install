@@ -7,7 +7,7 @@ This script just install docker, Phalcon-devtoos and PHP_CodeSniffer locally.
 # Installation
 ```
 cd ~
-git clone 
+git clone https://github.com/412445773/Phalcon_devtools_3.2.13_install.git
 cd ~/initialize_env
 chmod u+x initialize_env.sh install_imagick.exp
 . ./initialize_env.sh
