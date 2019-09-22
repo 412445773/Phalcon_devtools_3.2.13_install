@@ -1,0 +1,2 @@
+# Phalcon-
+开发使用VM VisualBox开虚拟机CentOS,应用跑在docker里。CentOS主要是运行Phalcon-devtools和PHP_CodeSniffer
