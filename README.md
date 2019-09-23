@@ -8,7 +8,7 @@ This script just install docker, docker-compose, Phalcon-devtoos and PHP_CodeSni
 ```
 cd ~
 git clone https://github.com/412445773/Phalcon_devtools_3.2.13_install.git
-cd ~/initialize_env
+cd ~/Phalcon_devtools_3.2.13_install
 chmod u+x initialize_env.sh install_imagick.exp
 . ./initialize_env.sh
 ```
