@@ -2,7 +2,7 @@
 #set -ex
 PHP_VERSION=7.2.12
 PHP_SHA256=d7cabdf4e51db38121daf0d494dc074743b24b6c79e592037eeedd731f1719dd
-CPHALCON_VERSION=3.4.3
+CPHALCON_VERSION=3.4.1
 PHALCON_DEVTOOLS_VERSION=3.2.13
 scripts_dir=$(dirname $(readlink -f "$0"))
 scripts_dir=$(cd "$(dirname "$0")";pwd)
@@ -86,7 +86,7 @@ echo 'extension=imagick.so' > /usr/local/etc/php/conf.d/imagick.ini
 #安装psr
 pecl list | grep -q psr
 psr_installed=$?
-[ $psr_installed -ne 0 ] && pecl install psr 
+[ $psr_installed -ne 0 ] && pecl install psr
 echo 'extension=psr.so' > /usr/local/etc/php/conf.d/psr.ini
 
 [ ! -d /usr/local/src/cphalcon ] && cd /usr/local/src && git clone https://github.com/phalcon/cphalcon.git
