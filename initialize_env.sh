@@ -7,8 +7,8 @@ PHALCON_DEVTOOLS_VERSION=3.2.13
 scripts_dir=$(dirname $(readlink -f "$0"))
 scripts_dir=$(cd "$(dirname "$0")";pwd)
 #修改CentOS源，epel源
-wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
-wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
 yum remove -y docker docker-common docker-selinux docker-engine
 yum clean all
 yum makecache
@@ -16,7 +16,7 @@ yum update -y
 yum install -y re2c openssl-devel libxml2-devel curl-devel libwebp-devel libjpeg-devel libpng-devel ImageMagick-devel autoconf automake git yum-utils device-mapper-persistent-data lvm2 expect
 yum remove docker docker-common docker-selinux docker-engine
 #设置docker源
-wget -O /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
+curl -o /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
 sed -i 's+download.docker.com+mirrors.tuna.tsinghua.edu.cn/docker-ce+' /etc/yum.repos.d/docker-ce.repo
 yum makecache fast
 yum install -y docker-ce docker-compose
@@ -31,7 +31,7 @@ if [ -e /usr/local/src/php-${PHP_VERSION}.tar.gz ];then
     fi
 fi
 if [ ! -e /usr/local/src/php-${PHP_VERSION}.tar.gz ];then
-    wget -O /usr/local/src/php-${PHP_VERSION}.tar.gz https://www.php.net/distributions/php-${PHP_VERSION}.tar.gz
+    curl -o /usr/local/src/php-${PHP_VERSION}.tar.gz https://www.php.net/distributions/php-${PHP_VERSION}.tar.gz
     tar -xf /usr/local/src/php-${PHP_VERSION}.tar.gz -C /usr/local/
     cd /usr/local/php-${PHP_VERSION}
     make clean
