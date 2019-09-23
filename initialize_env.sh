@@ -9,7 +9,10 @@ scripts_dir=$(cd "$(dirname "$0")";pwd)
 #修改CentOS源，epel源
 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
 curl -o /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo
+#删掉原来的docker
 yum remove -y docker docker-common docker-selinux docker-engine
+#删掉系统的的php
+yum remove -y php
 yum clean all
 yum makecache
 yum update -y
