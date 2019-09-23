@@ -13,7 +13,7 @@ yum remove -y docker docker-common docker-selinux docker-engine
 yum clean all
 yum makecache
 yum update -y
-yum install -y re2c openssl-devel libxml2-devel curl-devel libwebp-devel libjpeg-devel libpng-devel ImageMagick-devel autoconf automake git yum-utils device-mapper-persistent-data lvm2 expect
+yum install -y re2c openssl-devel libxml2-devel curl-devel libwebp-devel libjpeg-devel libpng-devel ImageMagick-devel autoconf automake gcc expect yum-utils device-mapper-persistent-data lvm2
 yum remove docker docker-common docker-selinux docker-engine
 #设置docker源
 curl -o /etc/yum.repos.d/docker-ce.repo https://download.docker.com/linux/centos/docker-ce.repo
