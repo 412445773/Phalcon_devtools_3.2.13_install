@@ -19,4 +19,5 @@ php -v
 phpcs -h
 phpcbf -h
 phalcon commands
+docker-compose version   
 ```
